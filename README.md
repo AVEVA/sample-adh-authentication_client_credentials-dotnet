@@ -4,7 +4,7 @@
 
 [![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/ADH/aveva.sample-adh-authentication_client_credentials-dotnet?branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2582&branchName=main)
 
-This client uses the OAuth2/OIDC Client Credential Flow to obtain an access token. See the main ADH Authentication samples page [README](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION_README.md) for more information about this flow.
+This client uses the OAuth2/OIDC Client Credential Flow to obtain an access token. See the main Cds Authentication samples page [README](https://github.com/AVEVA/AVEVA-Samples-CloudOperations/blob/main/docs/AUTHENTICATION.md) for more information about this flow.
 
 ## Requirements
 
@@ -21,7 +21,7 @@ Developed against DotNet 6.0.
 
 ### Prerequisites
 
-- Register a Client Credential client in ADH.
+- Register a Client Credential client in Cds.
 - Replace the placeholders in the `appsettings.json` file with your Tenant Id, Client Id, and Client Secret obtained from registration.
 - Note: As a test, a request is made against the users endpoint. If the tenant being used has strict mode enabled and the client does not have Tenant Admin permissions, the test will fail. In this case, it is recommended to change the url to a type or a stream that the client has permission to access. 
 
@@ -63,6 +63,6 @@ dotnet test
 
 Tested against DotNet 6.0
 
-For the main ADH Authentication samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION.md)  
-For the main ADH samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS)  
-For the main AVEVA samples page [ReadMe](https://github.com/osisoft/OSI-Samples)
+For the main Cds Authentication samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations/blob/main/docs/AUTHENTICATION.md)  
+For the main Cds samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations)  
+For the main AVEVA samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples)

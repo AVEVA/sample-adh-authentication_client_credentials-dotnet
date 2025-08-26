@@ -6,7 +6,7 @@ namespace ClientCredentialFlow
 {
     public static class ClientCredential
     {
-        public static Uri AdhUri { get; set; }
+        public static Uri CdsUri { get; set; }
 
         public static HttpClient AuthenticatedHttpClient { get; set; }
 
@@ -22,14 +22,14 @@ namespace ClientCredentialFlow
             AuthenticationHandler = InitiateAuthenticationHandler(clientId, clientSecret);
             AuthenticatedHttpClient = new HttpClient(AuthenticationHandler)
             {
-                BaseAddress = AdhUri,
+                BaseAddress = CdsUri,
             };
         }
 
         private static AuthenticationHandler InitiateAuthenticationHandler(string clientId, string clientSecret)
         {
             // Create an instance of the AuthenticationHandler.
-            return new AuthenticationHandler(AdhUri, clientId, clientSecret)
+            return new AuthenticationHandler(CdsUri, clientId, clientSecret)
             {
                 InnerHandler = new HttpClientHandler()
                 {

@@ -12,7 +12,7 @@ namespace ClientCredentialFlow
         {
             InitConfig();
 
-            ClientCredential.AdhUri = new Uri(GetConfigValue("Resource"));
+            ClientCredential.CdsUri = new Uri(GetConfigValue("Resource"));
 
             string tenantId = GetConfigValue("TenantId");
             string clientId = GetConfigValue("ClientId");
@@ -20,7 +20,7 @@ namespace ClientCredentialFlow
             string version = GetConfigValue("ApiVersion");
             ClientCredential.CreateAuthenticatedHttpClient(clientId, clientSecret);
 
-            // Make an HTTP request to ADH using the authenticated client - since this is the first request, the AuthenticationHandler will
+            // Make an HTTP request to Cds using the authenticated client - since this is the first request, the AuthenticationHandler will
             // authenticate and acquire an Access Token and cache it.
             try
             {
@@ -40,7 +40,7 @@ namespace ClientCredentialFlow
                 throw;
             }
 
-            // Make another request to ADH - this call should use the cached Access Token.
+            // Make another request to Cds - this call should use the cached Access Token.
             try
             {
                 Uri uri = new ($"api/{version}/Tenants/{tenantId}/Users", UriKind.Relative);
